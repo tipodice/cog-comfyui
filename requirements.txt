@@ -75,6 +75,7 @@ gitpython
 pypng
 imageio-ffmpeg
 sageattention
+comfyui-frontend-package
 
 # Fixed version to resolve transformers import error
 transformers
