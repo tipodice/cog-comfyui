@@ -20,7 +20,6 @@ kornia>=0.7.1
 websocket-client==1.6.3
 diffusers
 av>=14.2.0
-comfyui-frontend-package==1.23.4
 comfyui-workflow-templates==0.1.41
 dill
 webcolors
