@@ -1,4 +1,23 @@
-[
+[ {
+    "repo": "https://github.com/M1kep/ComfyLiterals",
+    "commit": "bdddb08"
+  },
+  {
+    "repo": "https://github.com/yolain/ComfyUI-Easy-Use",
+    "commit": "f550ce8"
+  },
+  {
+    "repo": "https://github.com/city96/ComfyUI-GGUF",
+    "commit": "cf05733"
+  },
+  {
+    "repo": "https://github.com/Comfy-Org/ComfyUI-Manager",
+    "commit": "e99aafd"
+  },
+  {
+    "repo": "https://github.com/ClownsharkBatwing/RES4LYF",
+    "commit": "7750bf7"
+  },
   {
     "repo": "https://github.com/cubiq/ComfyUI_IPAdapter_plus",
     "commit": "a0f451a"
