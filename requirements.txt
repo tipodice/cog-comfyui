@@ -1,14 +1,14 @@
+# Core ComfyUI and Standard Dependencies
 torch==2.7.1
 torchvision
 torchaudio
 torchsde
 einops
-transformers>=4.49.0
 tokenizers>=0.13.3
 sentencepiece
 safetensors>=0.3.0
 aiohttp
-accelerate>=1.1.1
+accelerate
 pyyaml
 Pillow
 scipy
@@ -18,7 +18,7 @@ spandrel
 soundfile
 kornia>=0.7.1
 websocket-client==1.6.3
-diffusers>=0.31.0
+diffusers
 av>=14.2.0
 comfyui-frontend-package==1.23.4
 comfyui-workflow-templates==0.1.41
@@ -65,3 +65,15 @@ open-clip-torch>=2.24.0
 pytorch-lightning>=2.2.1
 huggingface_hub[hf-transfer]
 iopath
+
+# Missing Packages to Fix Errors
+uv==0.2.1
+gguf
+pywt
+alembic
+gitpython
+pypng
+imageio-ffmpeg
+
+# Fixed version to resolve transformers import error
+transformers==4.33.0
