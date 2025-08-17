@@ -69,7 +69,7 @@ iopath
 # Missing Packages to Fix Errors
 uv==0.2.1
 gguf
-pywt
+PyWavelets
 alembic
 gitpython
 pypng
