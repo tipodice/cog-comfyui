@@ -74,6 +74,7 @@ alembic
 gitpython
 pypng
 imageio-ffmpeg
+sageattention
 
 # Fixed version to resolve transformers import error
 transformers
