@@ -1,0 +1,613 @@
+{
+  "3": {
+    "inputs": {
+      "text": [
+        "175",
+        0
+      ],
+      "clip": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "PROMPT +"
+    }
+  },
+  "4": {
+    "inputs": {
+      "text": [
+        "165",
+        0
+      ],
+      "clip": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "PROMPT -"
+    }
+  },
+  "5": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "length": 1,
+      "batch_size": 1
+    },
+    "class_type": "EmptyHunyuanLatentVideo",
+    "_meta": {
+      "title": "LATENT"
+    }
+  },
+  "8": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "22": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "45": {
+    "inputs": {
+      "lora_name": "https://civitai.com/api/download/models/2075810",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "412",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Lora Low"
+    }
+  },
+  "46": {
+    "inputs": {
+      "lora_name": "https://civitai.com/api/download/models/2075971",
+      "strength_model": 2.0000000000000004,
+      "model": [
+        "419",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Lora High"
+    }
+  },
+  "53": {
+    "inputs": {
+      "eta": 0.30000000000000004,
+      "sampler_name": "exponential/res_2s",
+      "scheduler": "bong_tangent",
+      "steps": 20,
+      "steps_to_run": 10,
+      "denoise": 1,
+      "cfg": 1.0000000000000002,
+      "seed": 885996400757075,
+      "sampler_mode": "standard",
+      "bongmath": true,
+      "model": [
+        "46",
+        0
+      ],
+      "positive": [
+        "3",
+        0
+      ],
+      "negative": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "ClownsharKSampler_Beta",
+    "_meta": {
+      "title": "ClownsharKSampler"
+    }
+  },
+  "56": {
+    "inputs": {
+      "eta": 0.7500000000000001,
+      "sampler_name": "exponential/res_2s",
+      "scheduler": "bong_tangent",
+      "steps": 20,
+      "steps_to_run": 10,
+      "denoise": 1.0000000000000002,
+      "cfg": 1.0000000000000002,
+      "seed": -1,
+      "sampler_mode": "resample",
+      "bongmath": true,
+      "model": [
+        "112",
+        0
+      ],
+      "positive": [
+        "3",
+        0
+      ],
+      "negative": [
+        "4",
+        0
+      ],
+      "latent_image": [
+        "53",
+        0
+      ]
+    },
+    "class_type": "ClownsharKSampler_Beta",
+    "_meta": {
+      "title": "ClownsharKSampler"
+    }
+  },
+  "60": {
+    "inputs": {
+      "samples": [
+        "53",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "61": {
+    "inputs": {
+      "images": [
+        "60",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "62": {
+    "inputs": {
+      "samples": [
+        "56",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "VAEDecode",
+    "_meta": {
+      "title": "VAE Decode"
+    }
+  },
+  "63": {
+    "inputs": {
+      "images": [
+        "62",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "112": {
+    "inputs": {
+      "lora_name": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan21_T2V_14B_lightx2v_cfg_step_distill_lora_rank32.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoraLoaderModelOnly"
+    }
+  },
+  "164": {
+    "inputs": {
+      "String": "A masterpiece, ultra-detailed, photorealistic cinematic shot of a majestic, weathered 17th-century pirate galleon sailing on a calm open sea during a breathtaking golden hour sunset. The ship, with a hull of dark, salt-stained oak and intricate, ornate carvings on its stern, cuts cleanly through the deep blue water. Its massive, slightly tattered black sails are fully unfurled, catching the warm, golden light of the setting sun, which hangs low on the horizon. From the mainmast, a large, tattered black Jolly Roger flag, featuring a classic skull and crossbones, billows dramatically in the wind. The sunlight glistens on the wet deck and creates a brilliant, fiery reflection on the water's surface. Beneath the ship, the dark fins of several large sharks can be seen subtly cutting through the surface of the water, escorting the vessel. The shot is captured from a low angle at sea level, emphasizing the ship's immense scale and power against the vast, colorful sky. The mood is epic, adventurous, and stunningly beautiful."
+    },
+    "class_type": "String",
+    "_meta": {
+      "title": "PROMPT POSITIVE"
+    }
+  },
+  "165": {
+    "inputs": {
+      "String": "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+    },
+    "class_type": "String",
+    "_meta": {
+      "title": "PROMPT NEGATIVE"
+    }
+  },
+  "175": {
+    "inputs": {
+      "delimiter": ", ",
+      "clean_whitespace": "true",
+      "text_a": [
+        "164",
+        0
+      ],
+      "text_b": [
+        "176",
+        0
+      ]
+    },
+    "class_type": "Text Concatenate",
+    "_meta": {
+      "title": "Text Concatenate"
+    }
+  },
+  "176": {
+    "inputs": {
+      "String": "The whole photo is like early 2010s snapshot photo captured with a phone and uploaded to facebook, featuring dynamic natural lighting, and a neutral white color balance with washed out colors.\n\n"
+    },
+    "class_type": "String",
+    "_meta": {
+      "title": "LORA KEYWORD DO NOT TOUCH"
+    }
+  },
+  "177": {
+    "inputs": {
+      "text": "A masterpiece, ultra-detailed, photorealistic cinematic shot of a majestic, weathered 17th-century pirate galleon sailing on a calm open sea during a breathtaking golden hour sunset. The ship, with a hull of dark, salt-stained oak and intricate, ornate carvings on its stern, cuts cleanly through the deep blue water. Its massive, slightly tattered black sails are fully unfurled, catching the warm, golden light of the setting sun, which hangs low on the horizon. From the mainmast, a large, tattered black Jolly Roger flag, featuring a classic skull and crossbones, billows dramatically in the wind. The sunlight glistens on the wet deck and creates a brilliant, fiery reflection on the water's surface. Beneath the ship, the dark fins of several large sharks can be seen subtly cutting through the surface of the water, escorting the vessel. The shot is captured from a low angle at sea level, emphasizing the ship's immense scale and power against the vast, colorful sky. The mood is epic, adventurous, and stunningly beautiful., The whole photo is like early 2010s snapshot photo captured with a phone and uploaded to facebook, featuring dynamic natural lighting, and a neutral white color balance with washed out colors.",
+      "anything": [
+        "175",
+        0
+      ]
+    },
+    "class_type": "easy showAnything",
+    "_meta": {
+      "title": "SHOW POSITIVE PROMPT"
+    }
+  },
+  "377": {
+    "inputs": {
+      "vae_name": "wan_2.1_vae.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Load VAE"
+    }
+  },
+  "378": {
+    "inputs": {
+      "upscale_method": "bilinear",
+      "scale_by": 1.5,
+      "samples": [
+        "56",
+        0
+      ]
+    },
+    "class_type": "LatentUpscaleBy",
+    "_meta": {
+      "title": "Upscale Latent By"
+    }
+  },
+  "379": {
+    "inputs": {
+      "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+      "type": "wan",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "Load CLIP"
+    }
+  },
+  "381": {
+    "inputs": {
+      "lora_name": "https://civitai.com/api/download/models/2075971",
+      "strength_model": 2,
+      "model": [
+        "415",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Lora High"
+    }
+  },
+  "383": {
+    "inputs": {
+      "rgthree_comparer": {
+        "images": [
+          {
+            "name": "A",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_enmmc_00001_.png&type=temp&subfolder=&rand=0.7686082748202865"
+          },
+          {
+            "name": "B",
+            "selected": true,
+            "url": "/api/view?filename=rgthree.compare._temp_enmmc_00002_.png&type=temp&subfolder=&rand=0.9808039270341044"
+          }
+        ]
+      },
+      "image_a": [
+        "62",
+        0
+      ],
+      "image_b": [
+        "396",
+        0
+      ]
+    },
+    "class_type": "Image Comparer (rgthree)",
+    "_meta": {
+      "title": "Image Comparer (rgthree)"
+    }
+  },
+  "384": {
+    "inputs": {
+      "images": [
+        "396",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "386": {
+    "inputs": {
+      "lora_name": "https://civitai.com/api/download/models/2075810",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "414",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "Lora Low"
+    }
+  },
+  "387": {
+    "inputs": {
+      "text": [
+        "175",
+        0
+      ],
+      "clip": [
+        "379",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "PROMPT +"
+    }
+  },
+  "388": {
+    "inputs": {
+      "text": [
+        "165",
+        0
+      ],
+      "clip": [
+        "379",
+        0
+      ]
+    },
+    "class_type": "CLIPTextEncode",
+    "_meta": {
+      "title": "PROMPT -"
+    }
+  },
+  "389": {
+    "inputs": {
+      "lora_name": "https://huggingface.co/Kijai/WanVideo_comfy/resolve/main/Wan21_T2V_14B_lightx2v_cfg_step_distill_lora_rank32.safetensors",
+      "strength_model": 1.0000000000000002,
+      "model": [
+        "386",
+        0
+      ]
+    },
+    "class_type": "LoraLoaderModelOnly",
+    "_meta": {
+      "title": "LoraLoaderModelOnly"
+    }
+  },
+  "394": {
+    "inputs": {
+      "seed": 584257133756611,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "res_2s",
+      "scheduler": "bong_tangent",
+      "denoise": 0.62,
+      "model": [
+        "381",
+        0
+      ],
+      "positive": [
+        "387",
+        0
+      ],
+      "negative": [
+        "388",
+        0
+      ],
+      "latent_image": [
+        "378",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "395": {
+    "inputs": {
+      "seed": 1022466442921292,
+      "steps": 4,
+      "cfg": 1,
+      "sampler_name": "res_2s",
+      "scheduler": "bong_tangent",
+      "denoise": 0.55,
+      "model": [
+        "389",
+        0
+      ],
+      "positive": [
+        "387",
+        0
+      ],
+      "negative": [
+        "388",
+        0
+      ],
+      "latent_image": [
+        "394",
+        0
+      ]
+    },
+    "class_type": "KSampler",
+    "_meta": {
+      "title": "KSampler"
+    }
+  },
+  "396": {
+    "inputs": {
+      "tile_size": 512,
+      "overlap": 64,
+      "temporal_size": 64,
+      "temporal_overlap": 8,
+      "samples": [
+        "395",
+        0
+      ],
+      "vae": [
+        "377",
+        0
+      ]
+    },
+    "class_type": "VAEDecodeTiled",
+    "_meta": {
+      "title": "VAE Decode (Tiled)"
+    }
+  },
+  "397": {
+    "inputs": {
+      "method": "mkl",
+      "strength": 1,
+      "image_ref": [
+        "62",
+        0
+      ],
+      "image_target": [
+        "396",
+        0
+      ]
+    },
+    "class_type": "ColorMatch",
+    "_meta": {
+      "title": "Color Match"
+    }
+  },
+  "398": {
+    "inputs": {
+      "images": [
+        "397",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Color match image save"
+    }
+  },
+  "412": {
+    "inputs": {
+      "unet_name": "wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "413": {
+    "inputs": {
+      "unet_name": "wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "414": {
+    "inputs": {
+      "unet_name": "wan2.2_t2v_low_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "415": {
+    "inputs": {
+      "unet_name": "wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "419": {
+    "inputs": {
+      "unet_name": "wan2.2_t2v_high_noise_14B_fp8_scaled.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "Load Diffusion Model"
+    }
+  },
+  "420": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "62",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  }
+}
